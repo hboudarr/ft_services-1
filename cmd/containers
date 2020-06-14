@@ -1,0 +1,4 @@
+eval $(minikube docker-env)
+docker build -t nginx-img .
+kubectl apply -f nginx-pod.yaml
+kubectl apply -f nginx-ingress.yaml
