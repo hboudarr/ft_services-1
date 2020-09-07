@@ -1,8 +1,0 @@
-minikube run dashboard
-minikube addons enable ingress
-kubectl get all -n kubernetes-dashboard (recupe port service/kubernetes-dashboard)
-kubectl apply -f dashboard-ingress.yaml
-kubectl get ingress -n kubernetes-dashboard (recup ip )
-sudo vim /etc/hosts (domaine name + ip ingress dashboard)
-
-
