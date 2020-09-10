@@ -18,9 +18,9 @@ WORKDIR /
 RUN mkdir -p /run/nginx
 RUN mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.sample
 COPY mynginx.conf /etc/nginx/conf.d/mynginx.conf
-RUN mkdir -p /etc/ssl/certs && mkdir -p /etc/ssl/private
-COPY nginx.crt /etc/ssl/certs/nginx.crt
-COPY nginx.key /etc/ssl/private/nginx.key
+# RUN mkdir -p /etc/ssl/certs && mkdir -p /etc/ssl/private
+# COPY nginx.crt /etc/ssl/certs/nginx.crt
+# COPY nginx.key /etc/ssl/private/nginx.key
 RUN chmod 755 /usr/share/webapps/phpmyadmin/config.inc.php
 COPY start_pma.sh /home/start_pma.sh
 RUN chmod +x /home/start_pma.sh

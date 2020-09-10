@@ -1,6 +1,7 @@
-#! bin/bash
-#minikube start
-#eval $(minikube docker-env)
+#! /bin/bash
+minikube start
+sleep 5
+eval $(minikube docker-env)
 Kubectl apply -f metallb/metallb.yaml
 minikube ip
 kubectl apply -f metallb/configmap.yaml

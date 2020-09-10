@@ -25,10 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pma-svc
+  name: pma-balancer
 spec:
-  ports:
-    - port: 5000
-      targetPort: 5000
   selector:
     app: pma
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 5000
+      targetPort: 5000
