@@ -19,7 +19,7 @@ docker build -t influxdb srcs/influxdb/.
 
 kubectl apply -f srcs/mysql/mysql-pod.yaml
 kubectl apply -f srcs/influxdb/influxdb-pod.yaml
-sleep 40
+sleep 15
 kubectl apply -f srcs/phpmyadmin/phpmyadmin-pod.yaml
 kubectl apply -f srcs/wordpress/wp-pod.yaml
 kubectl apply -f srcs/nginx/nginx-pod.yaml
